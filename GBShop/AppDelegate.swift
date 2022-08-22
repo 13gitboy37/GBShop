@@ -53,22 +53,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
+        
+        let catalog = requestFactory.makeCatalogRequestFactory()
+        catalog.fetchProductsCatalog(pageNumber: 1, idCategory: 1) { response in
+            switch response.result {
+            case .success(let catalog):
+                print(catalog)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let good = requestFactory.makeGoodRequestFactory()
+        good.fetchProductsCatalog(idProduct: 123) { response in
+            switch response.result {
+            case .success(let good):
+                print(good)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
       
         return true
     }
 }
-//
-//    // MARK: UISceneSession Lifecycle
-//
-//    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-//
-//        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-//    }
-//
-//    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-//      
-//    }
-//
-//
-//}
+
 
