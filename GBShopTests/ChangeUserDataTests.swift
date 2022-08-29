@@ -10,7 +10,6 @@ import XCTest
 
 class ChangeUserDataTests: XCTestCase {
     
-    private let expectationChangeUserData = XCTestExpectation(description: "Change user data testing")
     private var changeUserData: ChangeUserDataRequestFactory!
     private var isRequestPassed: Bool!
     
@@ -26,6 +25,7 @@ class ChangeUserDataTests: XCTestCase {
     }
     
     func testChangeUserData() {
+        let expectationChangeUserData = XCTestExpectation(description: "Change user data testing")
         let idUser = 123
         let userName = "Somebody"
         let password = "mypassword"
@@ -48,7 +48,7 @@ class ChangeUserDataTests: XCTestCase {
             case .failure(let error):
                 XCTFail(error.localizedDescription)
             }
-            self?.expectationChangeUserData.fulfill()
+            expectationChangeUserData.fulfill()
         }
         wait(for: [expectationChangeUserData],
              timeout: 10.0)

@@ -9,11 +9,10 @@ import XCTest
 @testable import GBShop
 
 class LogoutTests: XCTestCase {
-
-    private let expectationLogout = XCTestExpectation(description: "LogoutTesting")
+    
     private var logout: LogoutRequestFactory!
     private var isRequestPassed: Bool!
-   
+    
     override func setUp() {
         let factory = RequestFactory()
         logout = factory.makeLogoutRequestFactory()
@@ -26,7 +25,9 @@ class LogoutTests: XCTestCase {
     }
     
     func testLogout() {
-       let idUser = 123
+        
+        let expectationLogout = XCTestExpectation(description: "LogoutTesting")
+        let idUser = 123
         
         logout.logout(idUser: idUser){ [weak self] response in
             switch response.result {
@@ -36,7 +37,7 @@ class LogoutTests: XCTestCase {
             case .failure(let error):
                 XCTFail(error.localizedDescription)
             }
-            self?.expectationLogout.fulfill()
+            expectationLogout.fulfill()
         }
         wait(for: [expectationLogout],
              timeout: 10.0)

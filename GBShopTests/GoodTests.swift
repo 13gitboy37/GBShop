@@ -10,7 +10,6 @@ import XCTest
 
 class GoodTests: XCTestCase {
     
-    private let expectationGood = XCTestExpectation(description: "Good fetch testing")
     private var good: GoodRequestFactory!
     private var isRequestPassed: Bool!
     
@@ -25,7 +24,8 @@ class GoodTests: XCTestCase {
         isRequestPassed = nil
     }
     
-    func testRegistration() {
+    func testFetchGoods() {
+        let expectationGood = XCTestExpectation(description: "Good fetch testing")
         let idProduct = 123
         
         good.fetchProductsCatalog(idProduct: idProduct) { [weak self] response in
@@ -36,7 +36,7 @@ class GoodTests: XCTestCase {
             case .failure(let error):
                 XCTFail(error.localizedDescription)
             }
-            self?.expectationGood.fulfill()
+            expectationGood.fulfill()
         }
             wait(for: [expectationGood],
                  timeout: 10.0)

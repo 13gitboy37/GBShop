@@ -10,7 +10,6 @@ import XCTest
 
 class AuthTests: XCTestCase {
     
-    private let expectationLogin = XCTestExpectation(description: "AuthLoginTesting")
     private var auth: AuthRequestFactory!
     private var isRequestPassed: Bool!
     
@@ -26,6 +25,8 @@ class AuthTests: XCTestCase {
     }
     
     func testAuth() {
+        
+        let expectationLogin = XCTestExpectation(description: "AuthLoginTesting")
         let userName = "Somebody"
         let password = "mypassword"
         
@@ -37,7 +38,7 @@ class AuthTests: XCTestCase {
             case .failure(let error):
                 XCTFail(error.localizedDescription)
             }
-            self?.expectationLogin.fulfill()
+            expectationLogin.fulfill()
         }
         wait(for: [expectationLogin],
              timeout: 10.0)

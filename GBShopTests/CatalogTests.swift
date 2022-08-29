@@ -10,7 +10,6 @@ import XCTest
 
 class CatalogTests: XCTestCase {
     
-    private let expectationCatalog = XCTestExpectation(description: "Registration testing")
     private var catalog: CatalogRequestFactory!
     private var isRequestPassed: Bool!
     
@@ -26,6 +25,8 @@ class CatalogTests: XCTestCase {
     }
     
     func testRegistration() {
+        
+        let expectationCatalog = XCTestExpectation(description: "Registration testing")
         let pageNumber = 1
         let idCategory = 1
         

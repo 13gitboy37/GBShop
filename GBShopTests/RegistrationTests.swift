@@ -10,7 +10,6 @@ import XCTest
 
 class RegistrationTests: XCTestCase {
 
-        private let expectationRegistration = XCTestExpectation(description: "Registration testing")
         private var registration: RegistrationRequestFactory!
         private var isRequestPassed: Bool!
         
@@ -26,6 +25,8 @@ class RegistrationTests: XCTestCase {
         }
         
         func testRegistration() {
+            
+            let expectationRegistration = XCTestExpectation(description: "Registration testing")
             let idUser = 123
             let userName = "Somebody"
             let password = "mypassword"
@@ -48,7 +49,7 @@ class RegistrationTests: XCTestCase {
                 case .failure(let error):
                     XCTFail(error.localizedDescription)
                 }
-                self?.expectationRegistration.fulfill()
+                expectationRegistration.fulfill()
             }
             wait(for: [expectationRegistration],
                  timeout: 10.0)
