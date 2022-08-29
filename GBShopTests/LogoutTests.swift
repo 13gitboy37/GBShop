@@ -10,34 +10,32 @@ import XCTest
 
 class LogoutTests: XCTestCase {
     
+    private let expectationLogout = XCTestExpectation(description: "Logout Testing")
     private var logout: LogoutRequestFactory!
-    private var isRequestPassed: Bool!
-    
+        
     override func setUp() {
         let factory = RequestFactory()
         logout = factory.makeLogoutRequestFactory()
-        isRequestPassed = false
     }
     
     override func tearDown() {
         logout = nil
-        isRequestPassed = nil
     }
     
     func testLogout() {
         
-        let expectationLogout = XCTestExpectation(description: "LogoutTesting")
+        var isRequestPassed: Bool = false
         let idUser = 123
         
         logout.logout(idUser: idUser){ [weak self] response in
             switch response.result {
             case .success(let result):
-                self?.isRequestPassed = result.result == 1 ? true : false
+                isRequestPassed = result.result == 1 ? true : false
                 break
             case .failure(let error):
                 XCTFail(error.localizedDescription)
             }
-            expectationLogout.fulfill()
+            self?.expectationLogout.fulfill()
         }
         wait(for: [expectationLogout],
              timeout: 10.0)

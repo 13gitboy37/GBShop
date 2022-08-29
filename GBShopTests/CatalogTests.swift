@@ -10,23 +10,21 @@ import XCTest
 
 class CatalogTests: XCTestCase {
     
+    private let expectationCatalog = XCTestExpectation(description: "Registration testing")
     private var catalog: CatalogRequestFactory!
-    private var isRequestPassed: Bool!
+    
     
     override func setUp() {
         let factory = RequestFactory()
         catalog = factory.makeCatalogRequestFactory()
-        isRequestPassed = false
     }
     
     override func tearDown() {
         catalog = nil
-        isRequestPassed = nil
     }
     
     func testRegistration() {
-        
-        let expectationCatalog = XCTestExpectation(description: "Registration testing")
+        var isRequestPassed: Bool = false
         let pageNumber = 1
         let idCategory = 1
         
@@ -34,7 +32,7 @@ class CatalogTests: XCTestCase {
         { [weak self] response in
             switch response.result {
             case .success(let result):
-                self?.isRequestPassed = !result.isEmpty ? true : false
+                isRequestPassed = !result.isEmpty ? true : false
                 break
             case .failure(let error):
                 XCTFail(error.localizedDescription)
