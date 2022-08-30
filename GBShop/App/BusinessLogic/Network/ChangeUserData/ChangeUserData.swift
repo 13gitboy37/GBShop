@@ -13,7 +13,7 @@ class ChangeUserData: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    let baseUrl = URL(string: "https://pacific-brushlands-23583.herokuapp.com")!
     
     init(
         errorParser: AbstractErrorParser,
@@ -35,8 +35,8 @@ extension ChangeUserData: ChangeUserDataRequestFactory {
 extension ChangeUserData {
     struct ChangeUserDataModel: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "changeUserData.json"
+        let method: HTTPMethod = .post
+        let path: String = "changeUserData"
         
         let idUser: Int
         let login: String

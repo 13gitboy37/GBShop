@@ -8,6 +8,16 @@
 import Foundation
 
 struct CatalogResult: Codable {
+    let pageNumber: Int
+    let good: [GoodInCatalogResult]
+    
+    enum CodingKeys: String, CodingKey {
+        case pageNumber = "page_number"
+        case good
+    }
+}
+
+struct GoodInCatalogResult: Codable {
      let idProduct: Int
      let productName: String
      let price: Int
