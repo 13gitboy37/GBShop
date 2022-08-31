@@ -10,23 +10,21 @@ import XCTest
 
 class RegistrationTests: XCTestCase {
 
+        private let expectationRegistration = XCTestExpectation(description: "Registration testing")
         private var registration: RegistrationRequestFactory!
-        private var isRequestPassed: Bool!
         
         override func setUp() {
             let factory = RequestFactory()
             registration = factory.makeRegistrationRequestFactory()
-            isRequestPassed = false
         }
         
         override func tearDown() {
             registration = nil
-            isRequestPassed = nil
         }
         
         func testRegistration() {
             
-            let expectationRegistration = XCTestExpectation(description: "Registration testing")
+            var isRequestPassed: Bool = false
             let idUser = 123
             let userName = "Somebody"
             let password = "mypassword"
@@ -44,12 +42,12 @@ class RegistrationTests: XCTestCase {
             { [weak self] response in
                 switch response.result {
                 case .success(let result):
-                    self?.isRequestPassed = result.result == 1 ? true : false
+                    isRequestPassed = result.result == 1 ? true : false
                     break
                 case .failure(let error):
                     XCTFail(error.localizedDescription)
                 }
-                expectationRegistration.fulfill()
+                self?.expectationRegistration.fulfill()
             }
             wait(for: [expectationRegistration],
                  timeout: 10.0)

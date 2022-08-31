@@ -10,22 +10,22 @@ import XCTest
 
 class ChangeUserDataTests: XCTestCase {
     
+    private let expectationChangeUserData = XCTestExpectation(description: "Change user data testing")
     private var changeUserData: ChangeUserDataRequestFactory!
-    private var isRequestPassed: Bool!
+    
     
     override func setUp() {
         let factory = RequestFactory()
         changeUserData = factory.makeChangeDataUserRequsetFactory()
-        isRequestPassed = false
     }
     
     override func tearDown() {
         changeUserData = nil
-        isRequestPassed = nil
     }
     
     func testChangeUserData() {
-        let expectationChangeUserData = XCTestExpectation(description: "Change user data testing")
+        
+        var isRequestPassed: Bool = false
         let idUser = 123
         let userName = "Somebody"
         let password = "mypassword"
@@ -43,12 +43,12 @@ class ChangeUserDataTests: XCTestCase {
         { [weak self] response in
             switch response.result {
             case .success(let result):
-                self?.isRequestPassed = result.result == 1 ? true : false
+                isRequestPassed = result.result == 1 ? true : false
                 break
             case .failure(let error):
                 XCTFail(error.localizedDescription)
             }
-            expectationChangeUserData.fulfill()
+            self?.expectationChangeUserData.fulfill()
         }
         wait(for: [expectationChangeUserData],
              timeout: 10.0)

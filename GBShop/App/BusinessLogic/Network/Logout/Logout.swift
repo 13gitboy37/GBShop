@@ -13,7 +13,7 @@ class Logout: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
+    let baseUrl = URL(string: "https://pacific-brushlands-23583.herokuapp.com")!
     
     init(
         errorParser: AbstractErrorParser,
@@ -35,13 +35,13 @@ extension Logout: LogoutRequestFactory {
 extension Logout {
     struct Logout: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "logout.json"
+        let method: HTTPMethod = .post
+        let path: String = "logout"
         
         let idUser: Int
         var parameters: Parameters? {
             return [
-                "idUser": idUser,
+                "id_user": idUser,
             ]
         }
     }
