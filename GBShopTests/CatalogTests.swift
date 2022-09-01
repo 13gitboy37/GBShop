@@ -32,7 +32,7 @@ class CatalogTests: XCTestCase {
         { [weak self] response in
             switch response.result {
             case .success(let result):
-                isRequestPassed = !result.isEmpty ? true : false
+                isRequestPassed = !result.good.isEmpty ? true : false
                 break
             case .failure(let error):
                 XCTFail(error.localizedDescription)

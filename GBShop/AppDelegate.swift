@@ -73,7 +73,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-      
+        
+        let getReviews = requestFactory.makeGetReviewsFactory()
+        getReviews.getReviews(idProduct: 123, idUser: 123) { response in
+            switch response.result {
+            case .success(let reviews):
+                print(reviews)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let addReview = requestFactory.makeAddReviewFactory()
+        addReview.getReviews(idUser: 123, text: "Отличный товар") { response in
+            switch response.result {
+            case .success(let review):
+                print(review)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let deleteReview = requestFactory.makeDeleteReviewFactory()
+        deleteReview.deleteReview(idComment: 123) { response in
+            switch response.result {
+            case .success(let removableReview):
+                print(removableReview)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
         return true
     }
 }
