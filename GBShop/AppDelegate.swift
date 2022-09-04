@@ -103,6 +103,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
+        
+        print("Test")
         return true
     }
 }
