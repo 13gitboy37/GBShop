@@ -18,13 +18,15 @@ struct CatalogResult: Codable {
 }
 
 struct GoodInCatalogResult: Codable {
-     let idProduct: Int
-     let productName: String
-     let price: Int
+    let idProduct: Int
+    let productName: String
+    let price: Int
+    let quantity: Int?
 
      enum CodingKeys: String, CodingKey {
          case idProduct = "id_product"
          case productName = "product_name"
          case price
+         case quantity
      }
  }
