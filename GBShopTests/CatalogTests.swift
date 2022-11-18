@@ -23,7 +23,7 @@ class CatalogTests: XCTestCase {
         catalog = nil
     }
     
-    func testRegistration() {
+    func testCatalogRequest() {
         var isRequestPassed: Bool = false
         let pageNumber = 1
         let idCategory = 1

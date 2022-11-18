@@ -14,6 +14,7 @@ class Registration: AbstractRequestFactory {
     let sessionManager: Session
     let queue: DispatchQueue
     let baseUrl = URL(string: "https://pacific-brushlands-23583.herokuapp.com")!
+//    let baseUrl = URL(string: "http://127.0.0.1:8080")!
     
     init(
         errorParser: AbstractErrorParser,
@@ -27,7 +28,14 @@ class Registration: AbstractRequestFactory {
 
 extension Registration: RegistrationRequestFactory {
     
-    func registration(idUser: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void) {
+    func registration(idUser: Int,
+                      userName: String,
+                      password: String,
+                      email: String,
+                      gender: String,
+                      creditCard: String,
+                      bio: String,
+                      completionHandler: @escaping (AFDataResponse<RegistrationResult>) -> Void) {
         let requestModel = Registration(baseUrl: baseUrl, idUser: idUser, login: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
         self.request(request: requestModel, completionHandler: completionHandler)
     }

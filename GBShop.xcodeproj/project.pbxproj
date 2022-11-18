@@ -33,12 +33,12 @@
 		AF0A866C28B41E95009BE900 /* GoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A866B28B41E95009BE900 /* GoodTests.swift */; };
 		AF2EEDF328B22EB4003E5F33 /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2EEDF228B22EB4003E5F33 /* AuthTests.swift */; };
 		AF5702B828995D4300B4B0FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5702B728995D4300B4B0FB /* AppDelegate.swift */; };
-		AF5702BA28995D4300B4B0FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5702B928995D4300B4B0FB /* SceneDelegate.swift */; };
 		AF5702C128995D4300B4B0FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5702C028995D4300B4B0FB /* Assets.xcassets */; };
 		AF5702C428995D4300B4B0FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5702C228995D4300B4B0FB /* LaunchScreen.storyboard */; };
 		AF5702CF28995D4300B4B0FB /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5702CE28995D4300B4B0FB /* GBShopTests.swift */; };
 		AF5702D928995D4300B4B0FB /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5702D828995D4300B4B0FB /* GBShopUITests.swift */; };
 		AF5702DB28995D4300B4B0FB /* GBShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5702DA28995D4300B4B0FB /* GBShopUITestsLaunchTests.swift */; };
+		AF7D331928D121D600231F20 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AF7D331828D121D600231F20 /* Alamofire */; };
 		AFA663C728CB8E7800ACD993 /* PayBasketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA663C628CB8E7800ACD993 /* PayBasketResult.swift */; };
 		AFA663CA28CB8F8D00ACD993 /* PayBasketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA663C928CB8F8D00ACD993 /* PayBasketFactory.swift */; };
 		AFA663CC28CB8FCF00ACD993 /* PayBasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA663CB28CB8FCF00ACD993 /* PayBasket.swift */; };
@@ -53,7 +53,6 @@
 		AFA663E228CB9C1500ACD993 /* PayBasketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA663E128CB9C1500ACD993 /* PayBasketTests.swift */; };
 		AFD9E75828A288C8001A5B69 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9E75728A288C8001A5B69 /* AbstractErrorParser.swift */; };
 		AFD9E75C28A28963001A5B69 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9E75B28A28963001A5B69 /* ErrorParser.swift */; };
-		AFD9E75F28A28A11001A5B69 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AFD9E75E28A28A11001A5B69 /* Alamofire */; };
 		AFD9E76228A28B8B001A5B69 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9E76128A28B8B001A5B69 /* DataRequest.swift */; };
 		AFD9E76428A292BB001A5B69 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9E76328A292BB001A5B69 /* RequestRouter.swift */; };
 		AFD9E76728A2969A001A5B69 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9E76628A2969A001A5B69 /* LoginResult.swift */; };
@@ -70,6 +69,28 @@
 		AFD9E78428A3D209001A5B69 /* RegistrationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9E78328A3D209001A5B69 /* RegistrationResult.swift */; };
 		AFD9E78728A3D253001A5B69 /* RegistrationRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9E78628A3D253001A5B69 /* RegistrationRequestFactory.swift */; };
 		AFD9E78928A3D34B001A5B69 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD9E78828A3D34B001A5B69 /* Registration.swift */; };
+		AFE0BC5729104EB400008252 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC5629104EB400008252 /* AuthorizationViewController.swift */; };
+		AFE0BC5929104EE400008252 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC5829104EE400008252 /* AuthorizationView.swift */; };
+		AFE0BC5C2911554700008252 /* AuthorizationModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC5B2911554700008252 /* AuthorizationModuleBuilder.swift */; };
+		AFE0BC5E2911563A00008252 /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC5D2911563A00008252 /* AuthorizationPresenter.swift */; };
+		AFE0BC602911565500008252 /* AuthorizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC5F2911565500008252 /* AuthorizationInteractor.swift */; };
+		AFE0BC622911566800008252 /* AuthorizationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC612911566800008252 /* AuthorizationRouter.swift */; };
+		AFE0BC6529115B5300008252 /* AppStartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC6429115B5300008252 /* AppStartManager.swift */; };
+		AFE0BC6829115C1000008252 /* TabBarModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC6729115C1000008252 /* TabBarModuleBuilder.swift */; };
+		AFE0BC6B2911822800008252 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC6A2911822800008252 /* RegistrationView.swift */; };
+		AFE0BC6D2911824100008252 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC6C2911824100008252 /* RegistrationViewController.swift */; };
+		AFE0BC6F29119FBA00008252 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC6E29119FBA00008252 /* RegistrationPresenter.swift */; };
+		AFE0BC7129119FCE00008252 /* RegistrationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC7029119FCE00008252 /* RegistrationInteractor.swift */; };
+		AFE0BC7329119FE100008252 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC7229119FE100008252 /* RegistrationRouter.swift */; };
+		AFE0BC7529119FF700008252 /* RegistrationModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE0BC7429119FF700008252 /* RegistrationModuleBuilder.swift */; };
+		AFF81B002922906D00BE0BFC /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF81AFF2922906D00BE0BFC /* UserInfoViewController.swift */; };
+		AFF81B022922907E00BE0BFC /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF81B012922907E00BE0BFC /* UserInfoView.swift */; };
+		AFF81B05292292CC00BE0BFC /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF81B04292292CC00BE0BFC /* UserSession.swift */; };
+		AFF81B082923FE7700BE0BFC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF81B072923FE7700BE0BFC /* TabBarController.swift */; };
+		AFF81B0A2924027500BE0BFC /* UserInfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF81B092924027500BE0BFC /* UserInfoPresenter.swift */; };
+		AFF81B0C2924039500BE0BFC /* UserInfoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF81B0B2924039500BE0BFC /* UserInfoInteractor.swift */; };
+		AFF81B0E2924045D00BE0BFC /* UserInfoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF81B0D2924045D00BE0BFC /* UserInfoRouter.swift */; };
+		AFF81B102924059B00BE0BFC /* UserInfoBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF81B0F2924059B00BE0BFC /* UserInfoBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +138,6 @@
 		AF2EEDF228B22EB4003E5F33 /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
 		AF5702B428995D4300B4B0FB /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF5702B728995D4300B4B0FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF5702B928995D4300B4B0FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		AF5702C028995D4300B4B0FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF5702C328995D4300B4B0FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF5702C528995D4300B4B0FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,6 +176,28 @@
 		AFD9E78328A3D209001A5B69 /* RegistrationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationResult.swift; sourceTree = "<group>"; };
 		AFD9E78628A3D253001A5B69 /* RegistrationRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRequestFactory.swift; sourceTree = "<group>"; };
 		AFD9E78828A3D34B001A5B69 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
+		AFE0BC5629104EB400008252 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		AFE0BC5829104EE400008252 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		AFE0BC5B2911554700008252 /* AuthorizationModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationModuleBuilder.swift; sourceTree = "<group>"; };
+		AFE0BC5D2911563A00008252 /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
+		AFE0BC5F2911565500008252 /* AuthorizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInteractor.swift; sourceTree = "<group>"; };
+		AFE0BC612911566800008252 /* AuthorizationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRouter.swift; sourceTree = "<group>"; };
+		AFE0BC6429115B5300008252 /* AppStartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartManager.swift; sourceTree = "<group>"; };
+		AFE0BC6729115C1000008252 /* TabBarModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModuleBuilder.swift; sourceTree = "<group>"; };
+		AFE0BC6A2911822800008252 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		AFE0BC6C2911824100008252 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		AFE0BC6E29119FBA00008252 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		AFE0BC7029119FCE00008252 /* RegistrationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInteractor.swift; sourceTree = "<group>"; };
+		AFE0BC7229119FE100008252 /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
+		AFE0BC7429119FF700008252 /* RegistrationModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModuleBuilder.swift; sourceTree = "<group>"; };
+		AFF81AFF2922906D00BE0BFC /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		AFF81B012922907E00BE0BFC /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		AFF81B04292292CC00BE0BFC /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		AFF81B072923FE7700BE0BFC /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		AFF81B092924027500BE0BFC /* UserInfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoPresenter.swift; sourceTree = "<group>"; };
+		AFF81B0B2924039500BE0BFC /* UserInfoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoInteractor.swift; sourceTree = "<group>"; };
+		AFF81B0D2924045D00BE0BFC /* UserInfoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoRouter.swift; sourceTree = "<group>"; };
+		AFF81B0F2924059B00BE0BFC /* UserInfoBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFD9E75F28A28A11001A5B69 /* Alamofire in Frameworks */,
+				AF7D331928D121D600231F20 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +337,6 @@
 			children = (
 				AF5702E728995FC600B4B0FB /* App */,
 				AF5702B728995D4300B4B0FB /* AppDelegate.swift */,
-				AF5702B928995D4300B4B0FB /* SceneDelegate.swift */,
 				AF5702EC2899601000B4B0FB /* Core */,
 				AF5702ED2899601D00B4B0FB /* Resources */,
 				AF5702EE2899602E00B4B0FB /* Environments */,
@@ -307,10 +348,10 @@
 			isa = PBXGroup;
 			children = (
 				AF5702CE28995D4300B4B0FB /* GBShopTests.swift */,
+				AF0A865528B3A530009BE900 /* RegistrationTests.swift */,
 				AF2EEDF228B22EB4003E5F33 /* AuthTests.swift */,
 				AF0A865128B39415009BE900 /* LogoutTests.swift */,
 				AF0A865328B3993F009BE900 /* ChangeUserDataTests.swift */,
-				AF0A865528B3A530009BE900 /* RegistrationTests.swift */,
 				AF0A865A28B3E907009BE900 /* CatalogTests.swift */,
 				AF0A866B28B41E95009BE900 /* GoodTests.swift */,
 				AF076BFC28C1004600DA3E19 /* GetReviewsTests.swift */,
@@ -335,6 +376,8 @@
 		AF5702E728995FC600B4B0FB /* App */ = {
 			isa = PBXGroup;
 			children = (
+				AFE0BC6329115B4500008252 /* AppStartManager */,
+				AFE0BC5429104D5B00008252 /* Screens */,
 				AF5702E828995FCC00B4B0FB /* Flows */,
 				AF5702E928995FD600B4B0FB /* Assembly */,
 				AF5702EA28995FE700B4B0FB /* Entity */,
@@ -360,6 +403,7 @@
 		AF5702EA28995FE700B4B0FB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				AFF81B03292292BB00BE0BFC /* UserSession */,
 				AFA663D528CB933B00ACD993 /* RemoveFromBasket */,
 				AFA663CD28CB914300ACD993 /* AddToBasket */,
 				AFA663C528CB8E6C00ACD993 /* PayBasket */,
@@ -576,6 +620,89 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
+		AFE0BC5429104D5B00008252 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AFF81B062923FE6500BE0BFC /* TabBarController */,
+				AFE0BC5529104E7B00008252 /* AuthorizationView */,
+				AFE0BC692911820B00008252 /* RegistrationView */,
+				AFF81AFE2922903F00BE0BFC /* UserDataView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		AFE0BC5529104E7B00008252 /* AuthorizationView */ = {
+			isa = PBXGroup;
+			children = (
+				AFE0BC5829104EE400008252 /* AuthorizationView.swift */,
+				AFE0BC5629104EB400008252 /* AuthorizationViewController.swift */,
+				AFE0BC5D2911563A00008252 /* AuthorizationPresenter.swift */,
+				AFE0BC5F2911565500008252 /* AuthorizationInteractor.swift */,
+				AFE0BC612911566800008252 /* AuthorizationRouter.swift */,
+				AFE0BC5B2911554700008252 /* AuthorizationModuleBuilder.swift */,
+			);
+			path = AuthorizationView;
+			sourceTree = "<group>";
+		};
+		AFE0BC6329115B4500008252 /* AppStartManager */ = {
+			isa = PBXGroup;
+			children = (
+				AFE0BC6629115BEE00008252 /* TabBarModuleBuilder */,
+				AFE0BC6429115B5300008252 /* AppStartManager.swift */,
+			);
+			path = AppStartManager;
+			sourceTree = "<group>";
+		};
+		AFE0BC6629115BEE00008252 /* TabBarModuleBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				AFE0BC6729115C1000008252 /* TabBarModuleBuilder.swift */,
+			);
+			path = TabBarModuleBuilder;
+			sourceTree = "<group>";
+		};
+		AFE0BC692911820B00008252 /* RegistrationView */ = {
+			isa = PBXGroup;
+			children = (
+				AFE0BC6A2911822800008252 /* RegistrationView.swift */,
+				AFE0BC6C2911824100008252 /* RegistrationViewController.swift */,
+				AFE0BC6E29119FBA00008252 /* RegistrationPresenter.swift */,
+				AFE0BC7029119FCE00008252 /* RegistrationInteractor.swift */,
+				AFE0BC7229119FE100008252 /* RegistrationRouter.swift */,
+				AFE0BC7429119FF700008252 /* RegistrationModuleBuilder.swift */,
+			);
+			path = RegistrationView;
+			sourceTree = "<group>";
+		};
+		AFF81AFE2922903F00BE0BFC /* UserDataView */ = {
+			isa = PBXGroup;
+			children = (
+				AFF81B012922907E00BE0BFC /* UserInfoView.swift */,
+				AFF81AFF2922906D00BE0BFC /* UserInfoViewController.swift */,
+				AFF81B092924027500BE0BFC /* UserInfoPresenter.swift */,
+				AFF81B0B2924039500BE0BFC /* UserInfoInteractor.swift */,
+				AFF81B0D2924045D00BE0BFC /* UserInfoRouter.swift */,
+				AFF81B0F2924059B00BE0BFC /* UserInfoBuilder.swift */,
+			);
+			path = UserDataView;
+			sourceTree = "<group>";
+		};
+		AFF81B03292292BB00BE0BFC /* UserSession */ = {
+			isa = PBXGroup;
+			children = (
+				AFF81B04292292CC00BE0BFC /* UserSession.swift */,
+			);
+			path = UserSession;
+			sourceTree = "<group>";
+		};
+		AFF81B062923FE6500BE0BFC /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				AFF81B072923FE7700BE0BFC /* TabBarController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -593,7 +720,7 @@
 			);
 			name = GBShop;
 			packageProductDependencies = (
-				AFD9E75E28A28A11001A5B69 /* Alamofire */,
+				AF7D331828D121D600231F20 /* Alamofire */,
 			);
 			productName = GBShop;
 			productReference = AF5702B428995D4300B4B0FB /* GBShop.app */;
@@ -668,7 +795,7 @@
 			);
 			mainGroup = AF5702AB28995D4300B4B0FB;
 			packageReferences = (
-				AFD9E75D28A28A11001A5B69 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				AF7D331728D121D600231F20 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = AF5702B528995D4300B4B0FB /* Products */;
 			projectDirPath = "";
@@ -712,25 +839,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE0BC5E2911563A00008252 /* AuthorizationPresenter.swift in Sources */,
+				AFE0BC6B2911822800008252 /* RegistrationView.swift in Sources */,
+				AFE0BC602911565500008252 /* AuthorizationInteractor.swift in Sources */,
+				AFE0BC5929104EE400008252 /* AuthorizationView.swift in Sources */,
+				AFE0BC6529115B5300008252 /* AppStartManager.swift in Sources */,
 				AFA663DA28CB938900ACD993 /* RemoveFromBasketFactory.swift in Sources */,
+				AFE0BC622911566800008252 /* AuthorizationRouter.swift in Sources */,
+				AFE0BC5C2911554700008252 /* AuthorizationModuleBuilder.swift in Sources */,
+				AFF81B0E2924045D00BE0BFC /* UserInfoRouter.swift in Sources */,
 				AFA663D428CB91ED00ACD993 /* AddToBasket.swift in Sources */,
 				AF0A866A28B41BD6009BE900 /* GoodFetch.swift in Sources */,
+				AFE0BC7529119FF700008252 /* RegistrationModuleBuilder.swift in Sources */,
 				AF0A866828B41B7A009BE900 /* GoodRequestFactory.swift in Sources */,
 				AF076BFB28C0FECC00DA3E19 /* DeleteReview.swift in Sources */,
+				AFF81B002922906D00BE0BFC /* UserInfoViewController.swift in Sources */,
+				AFE0BC6D2911824100008252 /* RegistrationViewController.swift in Sources */,
+				AFF81B082923FE7700BE0BFC /* TabBarController.swift in Sources */,
 				AF076BF928C0FE9600DA3E19 /* DeleteReviewFactory.swift in Sources */,
 				AFD9E77128A29E5D001A5B69 /* RequestFactory.swift in Sources */,
 				AFD9E77E28A3CC37001A5B69 /* ChangeUserDataRequestFactory.swift in Sources */,
 				AF076BF128C0F9EB00DA3E19 /* AddReviewFactory.swift in Sources */,
 				AFD9E77C28A3CB92001A5B69 /* ChangeUserDataResult.swift in Sources */,
 				AFD9E75828A288C8001A5B69 /* AbstractErrorParser.swift in Sources */,
+				AFE0BC6829115C1000008252 /* TabBarModuleBuilder.swift in Sources */,
 				AFD9E78428A3D209001A5B69 /* RegistrationResult.swift in Sources */,
 				AFD9E78728A3D253001A5B69 /* RegistrationRequestFactory.swift in Sources */,
 				AFA663C728CB8E7800ACD993 /* PayBasketResult.swift in Sources */,
 				AF076BF628C0FE3300DA3E19 /* DeleteReviewResult.swift in Sources */,
 				AF076BE328C0F0A600DA3E19 /* GetReviewsResult.swift in Sources */,
 				AF076BED28C0F95A00DA3E19 /* AddReviewResult.swift in Sources */,
+				AFF81B102924059B00BE0BFC /* UserInfoBuilder.swift in Sources */,
 				AF076BE628C0F11A00DA3E19 /* Review.swift in Sources */,
+				AFE0BC5729104EB400008252 /* AuthorizationViewController.swift in Sources */,
 				AF0A866528B415F1009BE900 /* GoodResult.swift in Sources */,
+				AFE0BC7329119FE100008252 /* RegistrationRouter.swift in Sources */,
 				AFA663D228CB91AE00ACD993 /* AddToBasketFactory.swift in Sources */,
 				AFD9E76728A2969A001A5B69 /* LoginResult.swift in Sources */,
 				AFD9E76228A28B8B001A5B69 /* DataRequest.swift in Sources */,
@@ -738,8 +881,11 @@
 				AFA663D728CB934B00ACD993 /* RemoveFromBasketResult.swift in Sources */,
 				AF0A865E28B3E974009BE900 /* CatalogRequestFactory.swift in Sources */,
 				AFD9E78928A3D34B001A5B69 /* Registration.swift in Sources */,
+				AFE0BC6F29119FBA00008252 /* RegistrationPresenter.swift in Sources */,
 				AFD9E76428A292BB001A5B69 /* RequestRouter.swift in Sources */,
+				AFF81B022922907E00BE0BFC /* UserInfoView.swift in Sources */,
 				AFD9E76928A296F0001A5B69 /* User.swift in Sources */,
+				AFF81B0A2924027500BE0BFC /* UserInfoPresenter.swift in Sources */,
 				AFA663CF28CB915400ACD993 /* AddToBasketResult.swift in Sources */,
 				AFD9E77428A3BC48001A5B69 /* LogoutResult.swift in Sources */,
 				AFD9E76E28A29C10001A5B69 /* Auth.swift in Sources */,
@@ -748,13 +894,15 @@
 				AFD9E76C28A29BBA001A5B69 /* AuthRequestFactory.swift in Sources */,
 				AFD9E77728A3BEC9001A5B69 /* LogoutRequestFactory.swift in Sources */,
 				AF5702B828995D4300B4B0FB /* AppDelegate.swift in Sources */,
-				AF5702BA28995D4300B4B0FB /* SceneDelegate.swift in Sources */,
 				AF076BE928C0F20000DA3E19 /* GetReviewsFactory.swift in Sources */,
 				AFD9E75C28A28963001A5B69 /* ErrorParser.swift in Sources */,
 				AF0A865928B3E822009BE900 /* CatalogResult.swift in Sources */,
+				AFF81B05292292CC00BE0BFC /* UserSession.swift in Sources */,
+				AFF81B0C2924039500BE0BFC /* UserInfoInteractor.swift in Sources */,
 				AF076BF328C0FA1900DA3E19 /* AddReview.swift in Sources */,
 				AFD9E77928A3BF19001A5B69 /* Logout.swift in Sources */,
 				AFD9E78128A3CCC8001A5B69 /* ChangeUserData.swift in Sources */,
+				AFE0BC7129119FCE00008252 /* RegistrationInteractor.swift in Sources */,
 				AFA663CA28CB8F8D00ACD993 /* PayBasketFactory.swift in Sources */,
 				AFA663CC28CB8FCF00ACD993 /* PayBasket.swift in Sources */,
 			);
@@ -1102,20 +1250,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AFD9E75D28A28A11001A5B69 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		AF7D331728D121D600231F20 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				kind = exactVersion;
+				version = 5.6.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AFD9E75E28A28A11001A5B69 /* Alamofire */ = {
+		AF7D331828D121D600231F20 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AFD9E75D28A28A11001A5B69 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = AF7D331728D121D600231F20 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

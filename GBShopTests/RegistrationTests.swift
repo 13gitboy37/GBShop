@@ -26,8 +26,8 @@ class RegistrationTests: XCTestCase {
             
             var isRequestPassed: Bool = false
             let idUser = 123
-            let userName = "Somebody"
-            let password = "mypassword"
+            let userName = "Somebody1"
+            let password = "mypassword2"
             let email = "some@some.ru"
             let gender = "m"
             let creditCard = "9872389-2424-234224-234"

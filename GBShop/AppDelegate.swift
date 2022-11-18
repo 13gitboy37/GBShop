@@ -10,19 +10,18 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    let requestFactory = RequestFactory()
+    var window: UIWindow?
+    
+    var appStartManager: AppStartManager?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let auth = requestFactory.makeAuthRequestFactory()
-        auth.login(userName: "Somebody", password: "mypassword") { response in
-            switch response.result {
-            case .success(let login):
-                print(login)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        self.appStartManager = AppStartManager(window: self.window)
+        self.appStartManager?.start()
+        
+        /*
         
         let logout = requestFactory.makeLogoutRequestFactory()
         logout.logout(idUser: 123) { response in
@@ -133,7 +132,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+        */
         return true
     }
 }
