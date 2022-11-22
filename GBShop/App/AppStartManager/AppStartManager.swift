@@ -18,7 +18,7 @@ final class AppStartManager {
     }
     
     func start() {
-        let rootVC = AuthBuilder.build(requestFactory: requestFactory)
+        let rootVC = AuthAssembler.build(requestFactory: requestFactory)
         rootVC.navigationItem.title = "Login"
         
         let navVC = self.configuredNavigationController

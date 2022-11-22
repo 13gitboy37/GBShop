@@ -178,6 +178,13 @@ final class RegistrationView: UIView {
         return button
     }()
     
+    var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.backgroundColor = .lightGray
+        return activityIndicator
+    }()
+    
     //MARK: Properties
     weak var regViewController: RegistrationViewController?
     
@@ -212,6 +219,7 @@ final class RegistrationView: UIView {
         addBioLabel()
         addBioTextView()
         addSignUpButton()
+        addActivityIndicator()
     }
     
     private func setupPullDownMenu() {
@@ -389,6 +397,16 @@ final class RegistrationView: UIView {
             signUpButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 150),
             signUpButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -150)
         ])
+    }
+    
+    private func addActivityIndicator() {
+        contentView.addSubview(activityIndicator)
+        
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
+        
     }
     
     //MARK: Methods

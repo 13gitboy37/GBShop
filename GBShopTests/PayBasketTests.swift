@@ -20,7 +20,7 @@ class PayBasketTests: XCTestCase {
     
     override func tearDown() {
         payBasket = nil
-        }
+    }
     
     func testPayBasket() {
         

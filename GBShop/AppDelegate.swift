@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.appStartManager = AppStartManager(window: self.window)
         self.appStartManager?.start()
         
-        /*
         
+/*
         let logout = requestFactory.makeLogoutRequestFactory()
         logout.logout(idUser: 123) { response in
             switch response.result {
@@ -32,26 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
-        let changeUserData = requestFactory.makeChangeDataUserRequsetFactory()
-        changeUserData.changeUserData(idUser: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
-            switch response.result {
-            case .success(let changeUserData):
-                print(changeUserData)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-        
-        let registration = requestFactory.makeRegistrationRequestFactory()
-        registration.registration(idUser: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { response in
-            switch response.result {
-            case .success(let registration):
-                print(registration)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
+        let requestFactory = RequestFactory()
         
         let catalog = requestFactory.makeCatalogRequestFactory()
         catalog.fetchProductsCatalog(pageNumber: 1, idCategory: 1) { response in
@@ -62,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+
         let good = requestFactory.makeGoodRequestFactory()
         good.fetchProductsCatalog(idProduct: 123) { response in
             switch response.result {

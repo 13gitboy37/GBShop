@@ -12,7 +12,8 @@ protocol AuthViewOutput: AnyObject {
     func registrationButtonTapped()
     func loginSuccess()
     func showErrorLogin(error: String)
-    
+    func startActivityIndicator()
+    func stopActivityIndicator()
 }
 
 final class AuthPresenter {
@@ -44,6 +45,14 @@ extension AuthPresenter: AuthViewOutput {
     
     func registrationButtonTapped() {
         router.presentRegistrationViewController()
+    }
+    
+    func startActivityIndicator() {
+        authorizationView?.startShowingActivityIndicator()
+    }
+    
+    func stopActivityIndicator() {
+        authorizationView?.stopShowingActivityIndicator()
     }
 }
 

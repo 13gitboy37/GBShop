@@ -13,6 +13,8 @@ protocol RegistrationViewOutput: AnyObject {
     func showErrorRegistration(title: String, error: String)
     func registrationSuccess(title: String, message: String)
     func textFieldDelegate(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    func startActivityIndicator()
+    func stopActivityIndicator()
 }
 
 final class RegistrationPresenter {
@@ -30,7 +32,6 @@ final class RegistrationPresenter {
 }
 
 extension RegistrationPresenter: RegistrationViewOutput {
-    
     func textFieldDelegate(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         interactor.textFieldDelegate(textField, shouldChangeCharactersIn: range, replacementString: string)
     }
@@ -49,6 +50,14 @@ extension RegistrationPresenter: RegistrationViewOutput {
     
     func showErrorRegistration(title: String, error: String) {
         self.registrationView?.showAlertController(with: title, error: error)
+    }
+    
+    func startActivityIndicator() {
+        registrationView?.startShowingActivityIndicator()
+    }
+    
+    func stopActivityIndicator() {
+        registrationView?.stopShowingActivityIndicator()
     }
 }
 

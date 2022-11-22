@@ -99,15 +99,18 @@ extension RegistrationInteractor: RegistrationInteractorProtocol {
             self.presenter?.showErrorRegistration(title: titleForAlertController, error: "Number credit card shouldn`t have 16 digits")
             return
         }
+        presenter?.startActivityIndicator()
         networkService.registration(idUser: 123, userName: user.userName, password: user.password, email: user.email, gender: user.gender, creditCard: user.creditCard, bio: user.bio) { response in
             switch response.result {
             case .success(let result):
+                self.presenter?.stopActivityIndicator()
                 if result.result == 1 {
                     self.presenter?.registrationSuccess(title: "Congratulation", message: "Registration Success :)")
                 } else {
                     self.presenter?.showErrorRegistration(title: titleForAlertController, error: result.userMessage)
                 }
             case .failure(let error):
+                self.presenter?.stopActivityIndicator()
                 self.presenter?.showErrorRegistration(title: titleForAlertController, error: "\(error)")
             }
         }

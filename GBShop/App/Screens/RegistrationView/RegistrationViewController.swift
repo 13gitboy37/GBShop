@@ -9,6 +9,8 @@ import UIKit
 
 protocol RegistrationViewInput: AnyObject {
     func showAlertController(with title: String, error: String)
+    func startShowingActivityIndicator()
+    func stopShowingActivityIndicator()
 }
 
 final class RegistrationViewController: UIViewController {
@@ -92,6 +94,18 @@ extension RegistrationViewController: RegistrationViewInput {
     func showAlertController(with title: String, error: String) {
         DispatchQueue.main.async {
             self.present(self.presentAlert(title: title, error: error), animated: true)
+        }
+    }
+    
+    func startShowingActivityIndicator() {
+        DispatchQueue.main.async {
+            self.registrartionView.activityIndicator.startAnimating()
+        }
+    }
+    
+    func stopShowingActivityIndicator() {
+        DispatchQueue.main.async {
+            self.registrartionView.activityIndicator.stopAnimating()
         }
     }
 }

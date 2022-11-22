@@ -9,6 +9,8 @@ import UIKit
 
 protocol AuthViewInput: AnyObject {
     func showAlertController(with error: String)
+    func startShowingActivityIndicator()
+    func stopShowingActivityIndicator()
 }
 
 final class AuthorizationViewController: UIViewController {
@@ -59,6 +61,18 @@ extension AuthorizationViewController: AuthViewInput {
         DispatchQueue.main.async {
             self.present(self.authView.presentAlert(error: error),
                          animated: true)
+        }
+    }
+    
+    func startShowingActivityIndicator() {
+        DispatchQueue.main.async {
+            self.authView.activityIndicator.startAnimating()
+        }
+    }
+    
+    func stopShowingActivityIndicator() {
+        DispatchQueue.main.async {
+            self.authView.activityIndicator.stopAnimating()
         }
     }
 }
