@@ -25,8 +25,8 @@ class AuthTests: XCTestCase {
     func testAuth() {
         
         var isRequestPassed: Bool = false
-        let userName = "Somebody"
-        let password = "mypassword"
+        let userName = "123asd"
+        let password = "123"
         
         auth.login(userName: userName, password: password) { [weak self] response in
             switch response.result {
