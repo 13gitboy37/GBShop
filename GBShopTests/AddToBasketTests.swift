@@ -20,7 +20,7 @@ class AddToBasketTests: XCTestCase {
     
     override func tearDown() {
         addToBasket = nil
-        }
+    }
     
     func testAddToBasket() {
         

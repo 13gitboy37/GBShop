@@ -19,14 +19,14 @@ final class AuthRouter {
 extension AuthRouter: AuthRouterProtocol {
     func presentShopViewController() {
         DispatchQueue.main.async {
-            let tabBarController = TabBarBuilder.build()
+            let tabBarController = TabBarAssembler.build()
             self.viewController?.navigationController?.pushViewController(tabBarController, animated: true)
         }
     }
     
     func presentRegistrationViewController() {
         let requestFactory = RequestFactory()
-        let regViewController = RegistrationBuilder.build(requestFactory: requestFactory)
+        let regViewController = RegistrationAssembler.build(requestFactory: requestFactory)
         viewController?.navigationController?.navigationBar.isHidden = false
         DispatchQueue.main.async {
             self.viewController?.navigationController?.pushViewController(regViewController, animated: true)

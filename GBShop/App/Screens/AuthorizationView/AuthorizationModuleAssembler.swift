@@ -1,5 +1,5 @@
 //
-//  RegistrationModuleBuilder.swift
+//  AuthorizationModuleBuilder.swift
 //  GBShop
 //
 //  Created by Никита Мошенцев on 01.11.2022.
@@ -7,17 +7,17 @@
 
 import UIKit
 
-final class RegistrationBuilder {
+final class AuthAssembler {
     static func build(requestFactory: RequestFactory) -> UIViewController {
         let requestFactory = requestFactory
-        let authNetwork = requestFactory.makeRegistrationRequestFactory()
-        let interactor = RegistrationInteractor(networkService: authNetwork)
-        let router = RegistrationRouter()
-        let presenter = RegistrationPresenter(interactor: interactor,
+        let authNetwork = requestFactory.makeAuthRequestFactory()
+        let interactor = AuthInteractor(networkService: authNetwork)
+        let router = AuthRouter()
+        let presenter = AuthPresenter(interactor: interactor,
                                               router: router)
-        let viewController = RegistrationViewController()
+        let viewController = AuthorizationViewController()
         viewController.presenter = presenter
-        presenter.registrationView = viewController
+        presenter.authorizationView = viewController
         interactor.presenter = presenter
         router.viewController = viewController
         return viewController

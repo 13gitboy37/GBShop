@@ -21,6 +21,7 @@ struct GoodInCatalogResult: Codable {
     let idProduct: Int
     let productName: String
     let price: Int
+    let imageUrl: String
     let quantity: Int?
 
      enum CodingKeys: String, CodingKey {
@@ -28,5 +29,6 @@ struct GoodInCatalogResult: Codable {
          case productName = "product_name"
          case price
          case quantity
+         case imageUrl = "image_url"
      }
  }

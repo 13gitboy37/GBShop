@@ -97,6 +97,13 @@ final class AuthorizationView: UIView {
         return button
     }()
     
+    var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.backgroundColor = .lightGray
+        return activityIndicator
+    }()
+    
     //MARK: Properties
     weak var authViewController: AuthorizationViewController?
     
@@ -121,6 +128,7 @@ final class AuthorizationView: UIView {
         addPasswordTextField()
         addLoginButton()
         addRegistrationButton()
+        addActivityIndicator()
     }
     
     private func addLogoImage() {
@@ -194,6 +202,16 @@ final class AuthorizationView: UIView {
             registrationButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -50),
             registrationButton.heightAnchor.constraint(equalToConstant: 30)
         ])
+    }
+    
+    private func addActivityIndicator() {
+        contentView.addSubview(activityIndicator)
+        
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
+        
     }
 
     //MARK: Methods
